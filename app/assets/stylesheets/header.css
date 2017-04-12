@@ -1,0 +1,32 @@
+header {
+  background: #D2AFFF;
+  color: oldlace;
+  margin: 0;
+  padding: 0;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  header h1 {
+    font-family: "Lily Script One", cursive;
+    margin: 0;
+    font-size: 3vh; }
+  header button, header a {
+    border-left: 0.1vh solid oldlace;
+    border-right: 0.1vh solid oldlace;
+    flex: .5;
+    margin: 0 1vw;
+    text-align: center;
+    transition: background 1s;
+    background: rgba(153, 73, 255, 0.7);
+    font-family: "Patrick Hand", cursive;
+    font-size: 2.5vh; }
+    header button:hover, header a:hover {
+      background: salmon; }
+  header button:nth-child(2), header a:nth-child(2) {
+    flex: 3;
+    cursor: default; }
+    header button:nth-child(2):hover, header a:nth-child(2):hover {
+      background: rgba(153, 73, 255, 0.7); }
+
+/*# sourceMappingURL=header.css.map */

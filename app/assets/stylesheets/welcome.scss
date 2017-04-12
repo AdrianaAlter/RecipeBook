@@ -1,0 +1,115 @@
+@import 'variables';
+
+.main-div {
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 2%;
+  padding-bottom: 1%;
+  width: 40vw;
+  background-position: center;
+  background-image: url('http://www.stripemania.com/cache/20-20-90-3-FDF5E6-1-d2afff-DDEE1E-DDEE1E-DDEE1E-DDEE1E-78D316-78D316-78D316-78D316-78D316-no-yes-yes-yes-yes-.png');
+  color: $neutral;
+  margin: 15vh auto;
+  border-left: .1vh solid $purple;
+  border-right: .1vh solid $purple;
+  border-bottom: .1vh solid $purple;
+  box-shadow: .1vh .1vh .2vh black;
+  .border {
+    height: 12.5%;
+    width: 100%;
+    margin: 0;
+    background-image: $scallop;
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: top center;
+  }
+  h1 {
+    height: 20%;
+    line-height: 200%;
+    margin: 0;
+    text-align: center;
+    font-size: 5vh;
+    color: $teal;
+    font-family: $script;
+  }
+  div {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+      .welcome-section {
+        flex-basis: 46%;
+        border-radius: 4%;
+        background: transparentize(darken($purple, 20%), .3);
+        overflow: hidden;
+        height: 100%;
+        margin: 0 1%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        &:hover {
+          box-shadow: .1vh .1vh .2vh black;
+        }
+        .welcome-button {
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          font-size: 3vh;
+          font-family: $script;
+        }
+        .welcome-form {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          h1 {
+            @extend .welcome-button;
+            background: transparentize($teal, .2);
+            color: $neutral;
+            flex-basis: 20%;
+          }
+          fieldset {
+            padding: 0;
+            width: 90%;
+            margin: auto;
+            flex-basis: 40%;
+            input {
+              border-radius: 3%;
+              padding: 0 3%;
+              width: 94%;
+              margin: 2% auto;
+              height: 40%;
+              cursor: text;
+              color: darken($purple, 50%);
+              background: papayawhip;
+              font-family: $handwriting;
+              font-size: 2.5vh;
+              &:hover {
+                box-shadow: inset .1vh .1vh .2vh black;
+              }
+            }
+          }
+          .form-buttons {
+            flex-basis: 30%;
+            display: flex;
+            justify-content: center;
+            font-family: $handwriting;
+            button {
+              background: transparentize($teal, .2);
+              border-radius: 4%;
+              text-align: center;
+              font-size: 2.5vh;
+              flex-basis: 44%;
+              margin: 0 1%;
+              height: 80%;
+              &:hover {
+                box-shadow: .1vh .1vh .2vh black;
+              }
+            }
+          }
+        }
+      }
+
+  }
+
+}

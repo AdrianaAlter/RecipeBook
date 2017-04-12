@@ -1,0 +1,296 @@
+@import 'variables';
+
+#recipes, .detail {
+  width: 80vw !important;
+  height: 70vh !important;
+  margin-top: 15vh !important;
+  margin-bottom: 0 !important;
+  border-left: .1vh solid $purple;
+  border-right: .1vh solid $purple;
+  border-bottom: .1vh solid $purple;
+  box-shadow: .1vh .1vh .2vh black;
+
+  .wrapper {
+    padding: 1% 0;
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    height: 82%;
+    width: 95.5%;
+    justify-content: center;
+    .list {
+      flex: 4;
+      padding: 2%;
+      background: transparentize($neutral, .2);
+      box-shadow: inset .1vh .1vh .5vh black;
+      color: $teal;
+      margin: 0;
+      list-style: none;
+      overflow-y: scroll;
+      h2 {
+        font-family: $script;
+        text-align: center;
+        font-size: 3vh;
+      }
+      li {
+        border-bottom: .1vh solid $teal;
+        text-align: left !important;
+        font-size: 1.5vw;
+        font-family: $handwriting;
+        h3 {
+          margin: .5vh 0;
+        }
+        &:hover {
+          background: transparentize($purple, .5);
+        }
+      }
+    }
+    .recipe-form {
+      @extend .list;
+      overflow-y: hidden;
+      flex: 1;
+      justify-content: space-between !important;
+      h2 {
+        text-align: center;
+      }
+      textarea {
+        border-radius: 3%;
+        font-size: 2.5vh;
+        font-family: $handwriting;
+        padding: 3%;
+        width: 94%;
+        margin: 2% auto;
+        height: 20%;
+        cursor: text;
+        background: transparentize(salmon, .5);
+        border: .1vh solid $neutral;
+        &:hover {
+          box-shadow: inset .1vh .1vh .2vh black;
+        }
+        &:focus {
+          box-shadow: inset .1vh .1vh .2vh black;
+        }
+      }
+      button {
+        background: $teal;
+        font-size: 2.5vh;
+        border-radius: 4%;
+        padding: 1vh;
+        width: 50%;
+        margin: 1vh auto;
+        color: $neutral;
+        text-align: center;
+        flex-basis: 20%;
+        font-family: $handwriting;
+        &:hover {
+          box-shadow: .1vh .1vh .2vh black;
+        }
+      }
+
+    }
+
+  }
+}
+
+.detail {
+  height: 75vh !important;
+  width: 90vw !important;
+  margin: 15vh auto 0 auto !important;
+  background-image: none !important;
+  .wrapper {
+    background-image: url('http://www.stripemania.com/cache/20-20-90-3-FDF5E6-1-d2afff-DDEE1E-DDEE1E-DDEE1E-DDEE1E-78D316-78D316-78D316-78D316-78D316-no-yes-yes-yes-yes-.png') !important;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    .list {
+      box-sizing: padding-box !important;
+      box-shadow: none !important;
+      padding: .5% 0% .5% 1.2%;
+      background: transparent;
+      height: 90%;
+      flex-basis: 70%;
+      overflow: hidden;
+      ul {
+        background: transparentize($neutral, .2);
+        box-shadow: inset .1vh .1vh .5vh black;
+        color: $teal;
+        list-style: none;
+        margin: 0;
+        padding-top: .5vh;
+        height: 95%;
+        overflow-y: scroll;
+        li {
+          border-color: $teal;
+          width: 30%;
+          button {
+            float: right;
+          }
+        }
+      }
+    }
+    .recipe-form {
+      flex-basis: 35%;
+      box-sizing: padding-box;
+      padding: .5% 1.2% .5% 0% !important;
+      form {
+        @extend ul;
+        background: transparentize($teal, .3);
+        color: $neutral;
+        padding: .5vh 6% 0 6% !important;
+        overflow: hidden;
+        textarea {
+          background: transparentize($purple, .2);
+          color: $teal;
+        }
+      }
+      button {
+        margin: auto;
+      }
+    }
+  }
+  .tabs {
+    display: flex;
+    font-family: $script;
+    background: papayawhip;
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    height: 10%;
+    font-size: 2.5vh;
+    border-bottom: .1vh solid $neutral;
+    button {
+      flex-basis: 10%;
+      text-align: center;
+      background: $purple;
+    }
+    button:first-child {
+      flex-basis: 40%;
+      border-right: .1vh solid $darkpurple;
+      cursor: default;
+    }
+    button:nth-child(2){
+      margin-right: 3vw;
+      font-family: $handwriting;
+      font-size: 3vh;
+      border-top-right-radius: 10%;
+      transition: background 1s;
+      &:hover {
+        background: transparentize(darken($purple, 20%), .3);
+      }
+    }
+    section {
+      flex-basis: 50%;
+      height: 100%;
+      margin: 0;
+      background: papayawhip;
+      display: flex;
+      justify-content: space-between;
+      article {
+        cursor: pointer;
+        flex-basis: 33%;
+        text-align: center;
+        button {
+          background: $teal !important;
+          cursor: pointer !important;
+          border-top-left-radius: 10%;
+          border-top-right-radius: 10%;
+          height: 100%;
+          width: 100%;
+          transition: text-shadow 1s;
+          &:hover {
+            text-shadow: .1vh .1vh .2vh black;
+          }
+        }
+        .selected {
+          background: salmon !important;
+        }
+      }
+
+    }
+  }
+}
+
+.ingredient {
+  width: 95% !important;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  h3 {
+    margin: 0 !important;
+    padding-left: 1vw;
+    border-right: .1vh solid $neutral;
+    line-height: 150%;
+  }
+  h3:first-child {
+    flex-basis: 65%;
+    background: transparentize($purple, .2);
+  }
+  h3:nth-child(2){
+    background: transparentize(salmon, .6);
+    flex-basis: 30.5%;
+  }
+  button {
+    flex-basis: 4.5%;
+    background: transparentize($teal, .5);
+    height: 5vh;
+    color: $neutral;
+    text-align: center;
+    transition: background 1s;
+    &:hover {
+      background: transparentize($teal, .2);
+    }
+  }
+
+}
+
+.step {
+  @extend .ingredient;
+  h3:first-child {
+    flex-basis: 5%;
+    color: $neutral;
+  }
+  h3:nth-child(2){
+    flex-basis: 90.5%;
+  }
+}
+
+.note {
+  @extend .ingredient;
+  h3:first-child {
+    flex-basis: 95.5%;
+  }
+}
+
+.ingredient-form {
+  position: relative;
+  textarea {
+    height: 10% !important;
+    font-size: 3vh !important;
+  }
+  textarea:first-child{
+    background: transparentize(salmon, .2) !important;
+  }
+  button {
+    display: block;
+    height: 15%;
+    font-size: 3vh;
+    width: 88.5% !important;
+    margin: auto;
+    background: transparentize(salmon, .2) !important;
+    font-family: $script;
+    position: absolute;
+    bottom: 10%;
+    border-radius: 4%;
+    border: .1vh solid $neutral;
+  }
+}
+
+.step-form {
+  @extend .ingredient-form;
+  textarea {
+    height: 50% !important;
+  }
+}
+.note-form {
+  @extend .step-form;
+}

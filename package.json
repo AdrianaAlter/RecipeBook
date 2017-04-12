@@ -1,0 +1,35 @@
+{
+  "name": "RecipeBook",
+  "version": "1.0.0",
+  "description": "== README",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": "4.1.1",
+    "npm": "2.1.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-react": "^6.16.0",
+    "flux": "^3.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-modal": "^1.5.2",
+    "react-router": "^3.0.0",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "webpack": "^1.13.3"
+  }
+}
